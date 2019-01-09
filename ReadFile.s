@@ -18,7 +18,7 @@ _start:
 	read_loop:
 		movl $3,%eax
 		movl fd,%ebx
-		movl $fileBuffer,%ecx
+		movl $fileBuffer,%ecx	# Pay attention!!There is a $ before fileBuffer!
 		movl $20 , %edx
 		int $0x80
 		cmpl $0,%eax 
